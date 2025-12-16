@@ -99,6 +99,9 @@ img {
     /* color: #4d5ae5; */
     align-items: center;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .main-container {
@@ -108,13 +111,15 @@ img {
     background-color: #2e2f42;
     align-items: center;
     flex-direction: column;
-    /* background-image: url(../images/people-office1.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7));
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .head > .container {
     display: flex;
@@ -130,6 +135,10 @@ img {
 .nav-list {
     display: flex;
     gap: 40px;
+}
+
+.text-link-active {
+    position: relative;
 }
 .logo-foot {
     font-family: "Raleway", sans-serif;
@@ -186,17 +195,24 @@ img {
     letter-spacing: 0.02em;
     color:#2e2f42;
     padding: 24px 0;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-link.active {
     color: #404BBF;
 }
-.text-link.active::after {
+.text-link-active::after {
     content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
     width: 100%;
     display: block;
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-link:hover {
@@ -381,11 +397,14 @@ ul {
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .pf-list {
     width: calc((100% - 48px) / 3);
-    
+    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -393,6 +412,7 @@ ul {
     position: relative;
     overflow: hidden;
 }
+
 
 .overlay {
     position: absolute;
@@ -408,7 +428,8 @@ ul {
     font-size: 16px;
     color: #f4f4fd;
     line-height: 1.5;
-    
+    letter-spacing: 0.02em;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .pf-list:hover .overlay {
@@ -416,7 +437,7 @@ ul {
 }
 
 .team-name {
-    padding: 32px 0 0 0;
+    padding: 32px 0;
     text-align: center;
 }
 
@@ -426,12 +447,13 @@ ul {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-            0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-            0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     cursor: pointer;
 }
-
+.work-list:hover {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
 .team-work {
     padding: 120px 0 120px 0;
 }
@@ -451,6 +473,9 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     width: 274px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 16px;
 }
 
 .app-container {
@@ -474,11 +499,13 @@ ul {
     display: flex;
     align-items: center;
     padding-left: 100px;
+    justify-content: center;
 }
 
 .social-team {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
     gap: 24px;
     margin: 0 16px 32px 16px;
 }
@@ -490,6 +517,7 @@ ul {
 .social-group {
     width: 40px;
     height: 40px;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-card {
     display: flex;
@@ -501,8 +529,13 @@ ul {
     background-color: #4D5AE5;
     border-radius: 50%;
 }
+.social-card:hover,
+.social-card:focus {
+    background-color: #404bbf;
+}
 
 .social-foot-text {
+    font-weight: 500;
     color: #FFFFFF;
 }
 
@@ -523,9 +556,14 @@ ul {
     border-radius: 50%;    
 }
 
+.social-card-foot:hover,
+.social-card-foot:focus {
+    background-color: #31d0aa;
+}
 .social-foot-icon {
     width: 40px;
     height: 40px;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -541,4 +579,8 @@ ul {
     display: flex;
     width: 208px;
     gap: 16px;
+}
+
+.footer-social {
+    margin-right: 120px
 }
