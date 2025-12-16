@@ -497,9 +497,10 @@ ul {
     margin-bottom: 8px;
     background-color: #F4F4FD;
     display: flex;
-    align-items: center;
-    padding-left: 100px;
+    /* align-items: center;
+    padding-left: 100px; */
     justify-content: center;
+    padding: 24px 0 24px 0;
 }
 
 .social-team {
