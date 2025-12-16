@@ -31,6 +31,12 @@ img {
     display: block;
 }
 
+.container-footer {
+    display: flex;
+    align-items: baseline;
+    gap: 120px;
+}
+
 .head-conteiner {
     max-width: 1158px;
     padding: 0 15px;
@@ -438,7 +444,6 @@ ul {
 .foot {
     background-color: #2E2F42;
     padding: 100px 0;
-    gap: 120px;
 }
 
 .paragraph-foot {
@@ -523,8 +528,17 @@ ul {
     height: 40px;
 }
 
+
+.social-foot-text {
+    color: #F4F4FD;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    width: 208px;
+    padding-bottom: 16px;
+}
+
 .social-team-foot {
     display: flex;
-    justify-content: space-between;
+    width: 208px;
     gap: 16px;
 }
