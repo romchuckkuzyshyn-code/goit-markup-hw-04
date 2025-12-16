@@ -504,7 +504,7 @@ ul {
     letter-spacing: 0.02em;
     width: 274px;
     font-weight: 500;
-    color: --var(--white-color);
+    color: var(--white-color);
     margin-bottom: 16px;
 }
 
