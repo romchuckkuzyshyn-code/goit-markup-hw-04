@@ -195,13 +195,22 @@ img {
     letter-spacing: 0.02em;
     color:#2e2f42;
     padding: 24px 0;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-link-active {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
     color: #404BBF;
-    
+    position: relative;
+    width: 100%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-link-active::after {
     content: "";
@@ -213,7 +222,7 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -290,6 +299,7 @@ img {
     margin-top: 48px;
     margin-left: auto;
     margin-right: auto;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .post-headline-button:hover {
@@ -413,6 +423,7 @@ ul {
 .overlay-img {
     position: relative;
     overflow: hidden;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -439,7 +450,7 @@ ul {
 }
 
 .pf-list:hover {
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-name {
     padding: 32px 0;
@@ -518,13 +529,14 @@ ul {
 }
 
 .social-icons {
-    fill: #f4f4fd;    
+    fill: #f4f4fd;   
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-group {
     width: 40px;
     height: 40px;
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-card {
     display: flex;
