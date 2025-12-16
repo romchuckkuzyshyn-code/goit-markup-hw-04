@@ -34,7 +34,6 @@ img {
 .container-footer {
     display: flex;
     align-items: baseline;
-    gap: 120px;
 }
 
 .head-conteiner {
@@ -137,7 +136,7 @@ img {
     gap: 40px;
 }
 
-.text-link-active {
+.text-link .active {
     position: relative;
 }
 .logo-foot {
@@ -150,6 +149,7 @@ img {
     color: #4d5ae5;
     display: inline-block;
     margin-bottom: 16px;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .conteiner-foot {
@@ -198,8 +198,10 @@ img {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.text-link.active {
+
+.text-link-active {
     color: #404BBF;
+    
 }
 .text-link-active::after {
     content: "";
@@ -436,6 +438,9 @@ ul {
     transform: translatey(0);
 }
 
+.pf-list:hover {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .team-name {
     padding: 32px 0;
     text-align: center;
@@ -501,6 +506,7 @@ ul {
     padding-left: 100px; */
     justify-content: center;
     padding: 24px 0 24px 0;
+    align-items: center;
 }
 
 .social-team {
@@ -538,6 +544,7 @@ ul {
 .social-foot-text {
     font-weight: 500;
     color: #FFFFFF;
+    margin-bottom: 16px;
 }
 
 .container-social {
@@ -580,8 +587,13 @@ ul {
     display: flex;
     width: 208px;
     gap: 16px;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social {
     margin-right: 120px
+}
+
+.footer-logo {
+    margin-right: 120px;
 }
